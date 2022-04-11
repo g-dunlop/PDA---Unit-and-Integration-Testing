@@ -56,7 +56,11 @@ function App() {
 
       // if the 'equals' button was clicked, clear the previous operator, otherwise
       // record what the previous operator was
-      if (operator === "=") {
+      if (operator === "=" && previousOperator === '/' && runningTotal === 0 ){
+        setRunningTotal("Can't divide by zero")
+      }
+        else if (operator === "=" && runningTotal !== 0) 
+      {
         setPreviousOperator(null);
       } else {
         setPreviousOperator(operator);
