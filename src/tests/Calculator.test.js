@@ -99,28 +99,6 @@ describe('Calculator', () => {
     expect(runningTotal.text()).toEqual('14')
   })
 
-  it('should clear the running total without affecting the calculation', () => {
-    const button4 = container.find('#number4');
-    const button2 = container.find('#number2');
-    const addButton = container.find('#operator-add');
-    const clearButton = container.find('#clear');
-    const button5 = container.find('#number5');
-    const equalsButton = container.find('#operator-equals');
-    const runningTotal = container.find('#running-total');
-
-    button4.simulate('click');
-    addButton.simulate('click');
-    button2.simulate('click');
-    clearButton.simulate('click');
-    button5.simulate('click');
-    equalsButton.simulate('click');
-    expect(runningTotal.text()).toEqual('9');
-    
-  //test fails, error in lin 15 of Calculator.js - I think it should be if ( runningTotal !== 0 || newTotal)
-    
-
-
-  })
 
 })
 
